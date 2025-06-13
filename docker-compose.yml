@@ -8,7 +8,7 @@ x-logging: &default-logging
 x-version:
   &chaosgenius-version
   CHAOSGENIUS_VERSION_POSTFIX=stable-compose
-
+# check 
 services:
   chaosgenius-server:
     container_name: chaosgenius-server
