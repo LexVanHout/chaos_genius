@@ -20,7 +20,7 @@ from chaos_genius.alerts.utils import human_readable
         (1050000, "1.05M"),
         (5678906785, "5.679B"),
         (1000000000000, "1.0T"),
-        (15600000000000, "15.6T")
+        (15600000000000, "15.6T"),
     ],
 )
 def test_human_readable_conversion(value, expected):
