@@ -1,0 +1,33 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "openai-key",
+      "description": "Enter your OpenAI API Key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "OpenAI_LLM": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mzxrai/mcp-openai"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${input:openai-key}"
+      }
+    },
+    "OVVIAGenius": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:chaosgenius@10.0.0.22:5433/chaosgenius"
+      ],
+      "env": {}
+    }
+  }
+}
